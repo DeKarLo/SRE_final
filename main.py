@@ -32,7 +32,7 @@ class _Storage(PrometheusMetricStorageMixin, MemoryStorage):
 storage_collector = StorageAiogramCollector()
 storage = _Storage(storage_collector)
 dp = Dispatcher(storage=storage, bot=bot)
-
+fsefsefsefsef
 logger.info("Bot started!")SYJUGcAQHGWvcHASV Cgh
 
 dp.include_routers(callback_handlers.router, command_handlers.router)
