@@ -21,11 +21,11 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger(__name__)
-BrokenPipeErrorddawdwada
+
 collector = BotAiogramCollector()
 collector.add_bot(bot)
 bot.session.middleware(PrometheusMetricRequestMiddleware())
-fesfesff
+
 class _Storage(PrometheusMetricStorageMixin, MemoryStorage):
     pass
 

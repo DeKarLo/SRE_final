@@ -1,12 +1,14 @@
 #!/bin/bash
 
-COMPOSE_FILE_PATH=/home/ubuntu/dev/SRE_final/docker-compose.yml
+COMPOSE_FILE_PATH=/home/ubuntu/dev/SRE_final/
 
+cd $COMPOSE_FILE_PATH
+git pull
 # Pull the latest images
-docker-compose -f $COMPOSE_FILE_PATH pull
+docker-compose pull
 
 # Restart the services
-docker-compose -f $COMPOSE_FILE_PATH up -d --remove-orphans
+docker-compose up -d --remove-orphans
 
 # Optional: Remove old images
-docker image prune -f
+
