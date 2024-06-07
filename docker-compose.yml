@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
     app:
-        image: ghcr.io/dekarlo/ghcr.io/dekarlo/srefinal:refs_heads_main
+        image: ghcr.io/dekarlo/srefinal:latest
         build: .
         volumes:
             - .:/app
