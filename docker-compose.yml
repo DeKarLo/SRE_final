@@ -1,18 +1,17 @@
 version: "3.8"
 
 services:
-    app:
-        image: ghcr.io/dekarlo/srefinal:latest
-        build: .
-        volumes:
-            - .:/app
-        command: ["python3", "main.py"]
-        restart: always
-        depends_on:
-            - pushgateway
+  app:
+    image: ghcr.io/dekarlo/srefinal:latest
+    volumes:
+      - .:/app
+    command: ["python3", "main.py"]
+    restart: always
+    depends_on:
+      - pushgateway
 
-    pushgateway:
-        image: prom/pushgateway:latest
-        ports:
-            - "9091:9091"
-        restart: always
+  pushgateway:
+    image: prom/pushgateway:latest
+    ports:
+      - "9091:9091"
+    restart: always

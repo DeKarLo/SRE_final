@@ -10,7 +10,9 @@ env:
   IMAGE_NAME: srefinal
   REGISTRY: ghcr.io
 
-permissions: write-all
+permissions:
+  packages: write
+  contents: read
 
 jobs:
   push:
@@ -26,16 +28,13 @@ jobs:
         run: |
           IMAGE_ID=${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
 
-          # tag
+          # Tag the image with 'latest'
           TAG=$IMAGE_ID:latest
-
-          # Change all uppercase to lowercase
-          TAG=$(echo $TAG | tr '[A-Z]' '[a-z]')
 
           echo TAG=$TAG
 
           # Build the Docker image
           docker build . --file Dockerfile --tag $TAG
 
-          # Docker Push
+          # Push the Docker image
           docker push $TAG
