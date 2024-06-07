@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: moodbot
+  IMAGE_NAME: SRE_Final
   REGISTRY: ghcr.io
 
 permissions: write-all

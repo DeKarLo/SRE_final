@@ -20,11 +20,7 @@ services:
             - grafana-data:/var/lib/grafana
         restart: always
 
-    pushgateway:
-        image: prom/pushgateway:latest
-        ports:
-            - "9091:9091"
-        restart: always
+
 
 volumes:
     grafana-data:
