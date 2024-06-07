@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
     app:
-        image: ghcr.io/DeKarLo/SRE_Final:latest
+        image: ghcr.io/DeKarLo/srefinal:latest
         build: .
         volumes:
             - .:/app

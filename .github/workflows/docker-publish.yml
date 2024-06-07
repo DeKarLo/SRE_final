@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: SRE_Final
+  IMAGE_NAME: srefinal
   REGISTRY: ghcr.io
 
 permissions: write-all
