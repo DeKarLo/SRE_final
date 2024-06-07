@@ -28,7 +28,7 @@ bot.session.middleware(PrometheusMetricRequestMiddleware())
 class _Storage(PrometheusMetricStorageMixin, MemoryStorage):
     pass
 
-storage_collector = StorageAiogramCollector()efsfsef
+storage_collector = StorageAiogramCollector()
 storage = _Storage(storage_collector)
 dp = Dispatcher(storage=storage, bot=bot)
 
