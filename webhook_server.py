@@ -5,7 +5,8 @@ class WebhookHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         self.send_response(200)
         self.end_headers()
-        subprocess.run(["/bin/bash", "/home/ubuntu/dev/SRE_final/webhook_handler.sh"])
+        print("Webhook received!")
+        print(subprocess.run(["/bin/bash", "/home/ubuntu/dev/SRE_final/webhook_handler.sh"]))
 
 server_address = ('', 8000)
 httpd = HTTPServer(server_address, WebhookHandler)
