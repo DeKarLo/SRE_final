@@ -1,0 +1,28 @@
+name: Python Tests
+
+on:
+    push:
+        branches:
+            - sre-final
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: 3.11
+
+            - name: Install dependencies
+              run: pip install -r requirements.txt
+
+            - name: Run GPA tests
+              run: python3 core/utils/test_gpa_grade.py
+
+            - name: Run final grade info tests
+              run: python3 core/utils/test_final_grade_info.py
