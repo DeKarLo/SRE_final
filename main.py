@@ -38,7 +38,6 @@ dp.include_routers(callback_handlers.router, command_handlers.router)
 dp.message.middleware(PrometheusMetricMessageMiddleware())
 DispatcherAiogramCollector(dp)
 
-
 push_gateway_client = PushGatewayClient('http://pushgateway:9091/', 'app-1')
 
 @dp.startup()
