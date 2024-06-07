@@ -21,7 +21,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger(__name__)
-abobus
+sad
 collector = BotAiogramCollector()
 collector.add_bot(bot)
 bot.session.middleware(PrometheusMetricRequestMiddleware())
