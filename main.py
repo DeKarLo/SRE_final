@@ -4,7 +4,6 @@ import logging
 import asyncio
 from core.handlers import callback_handlers, command_handlers
 from core.config.config import BOT_TOKEN
-
 from aiogram_prometheus import (
     BotAiogramCollector,
     DispatcherAiogramCollector,
