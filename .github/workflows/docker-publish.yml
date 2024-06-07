@@ -26,11 +26,8 @@ jobs:
         run: |
           IMAGE_ID=${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
 
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's/[\/-]/_/g')
-
           # tag
-          TAG=$IMAGE_ID:$VERSION
+          TAG=$IMAGE_ID:latest
 
           # Change all uppercase to lowercase
           TAG=$(echo $TAG | tr '[A-Z]' '[a-z]')
