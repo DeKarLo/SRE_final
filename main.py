@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-collector = BotAiogramCollector()fesesfsefs
+collector = BotAiogramCollector()
 collector.add_bot(bot)
 bot.session.middleware(PrometheusMetricRequestMiddleware())
 
