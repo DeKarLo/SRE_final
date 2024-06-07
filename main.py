@@ -13,7 +13,7 @@ from aiogram_prometheus import (
     PushGatewayClient,
     StorageAiogramCollector,
 )
-
+cszzsc
 bot = Bot(BOT_TOKEN, parse_mode="HTML")
 logging.basicConfig(
     level=logging.INFO,
