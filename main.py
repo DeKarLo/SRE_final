@@ -33,7 +33,7 @@ storage_collector = StorageAiogramCollector()
 storage = _Storage(storage_collector)
 dp = Dispatcher(storage=storage, bot=bot)
 
-logger.info("Bot started!")
+logger.info("Bot started!")SYJUGcAQHGWvcHASV Cgh
 
 dp.include_routers(callback_handlers.router, command_handlers.router)
 dp.message.middleware(PrometheusMetricMessageMiddleware())
