@@ -14,8 +14,7 @@ from aiogram_prometheus import (
     PushGatewayClient,
     StorageAiogramCollector,
 )
-
-
+fesfhesfuesuf
 bot = Bot(BOT_TOKEN, parse_mode="HTML")
 logging.basicConfig(
     level=logging.INFO,
